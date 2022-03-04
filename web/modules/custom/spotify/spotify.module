@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * @file
+ * Contains spotify.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function spotify_help($route_name, RouteMatchInterface $route_match)
+{
+  switch ($route_name) {
+    // Main module help for the spotify module.
+    case 'help.page.spotify':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function spotify_theme($existing, $type, $theme, $path)
+{
+
+  return [
+    'releases_list' => [
+      'variables' => ['items' => [], 'title' => ''],
+    ],
+    'artist_list' => [
+      'variables' => ['artist' => [], 'title' => '', 'albums' => []],
+    ]
+  ];
+}

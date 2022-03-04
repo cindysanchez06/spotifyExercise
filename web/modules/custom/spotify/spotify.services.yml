@@ -1,0 +1,9 @@
+services:
+  spotify.spotify_services:
+    class: Drupal\spotify\Services\SpotifyServices
+  spotify.request_service:
+    class: Drupal\spotify\Services\RequestService
+  spotify.releases_service:
+    class: Drupal\spotify\Services\ReleasesService
+  spotify.artist_service:
+    class: Drupal\spotify\Services\ArtistService

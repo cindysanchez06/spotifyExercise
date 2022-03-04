@@ -1,0 +1,17 @@
+spotify.releases:
+  path: '/releases/list'
+  defaults:
+    _controller: '\Drupal\spotify\Controller\ReleasesController::index'
+    _tile: 'Releases'
+  requirements:
+    _access: "TRUE"
+    _permission: 'access content'
+spotify.artist:
+  path: '/artist/{id}'
+  defaults:
+    _controller: '\Drupal\spotify\Controller\ArtistController::index'
+    _tile: 'Artist'
+  requirements:
+    _access: "TRUE"
+    _permission: 'access content'
+
